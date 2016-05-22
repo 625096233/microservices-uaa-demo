@@ -1,0 +1,15 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "app1",
+      "app2",
+      "app3",
+      "gateway",
+      "uaa"
+    ],
+    "directoryPath": "../",
+    "useElk": true,
+    "adminPassword": "admin",
+    "jwtSecretKey": "ecb4219d7b7c0c3bfb358830bbe9301a68415471"
+  }
+}
