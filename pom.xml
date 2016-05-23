@@ -3,16 +3,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mycompany.myapp</groupId>
-    <artifactId>microservices-demo-parent</artifactId>
+    <artifactId>microservices-uaa-demo-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>uaa</module>
         <module>gateway</module>
-        <module>app1</module>
-        <module>app2</module>
-        <module>app3</module>
-        <module>docker</module>
+        <module>device-service</module>
+        <!--<module>app1</module>-->
+        <!--<module>app2</module>-->
+        <!--<module>app3</module>-->
+        <!--<module>docker</module>-->
     </modules>
 </project>

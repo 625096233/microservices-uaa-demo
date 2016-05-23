@@ -1,0 +1,41 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "deviceGroup",
+            "otherEntityName": "deviceGroup",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "groupName"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "deviceId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "deviceName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "4",
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "deviceDescription",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160523164738",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "device",
+    "pagination": "pagination",
+    "microserviceName": "device",
+    "searchEngine": "no"
+}

@@ -1,0 +1,13 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "device-service",
+      "gateway",
+      "uaa"
+    ],
+    "directoryPath": "../",
+    "useElk": true,
+    "adminPassword": "admin",
+    "jwtSecretKey": "a17a6b6f9745d87d44d2975b83bc44752cdc78cd"
+  }
+}

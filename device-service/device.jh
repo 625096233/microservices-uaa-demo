@@ -1,0 +1,23 @@
+entity Device {
+	deviceId Long,
+    deviceName String,
+    deviceDescription String
+}
+
+entity DeviceGroup {
+	groupId Long,
+    groupName String,
+    groupDescription String
+}
+
+relationship OneToMany {
+	/**
+	* A relationship
+	*/
+	DeviceGroup{device} to
+	/**
+	* Another side of the same relationship
+	*/
+	Device
+}
+

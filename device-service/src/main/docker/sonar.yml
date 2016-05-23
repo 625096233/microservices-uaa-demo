@@ -1,0 +1,8 @@
+version: '2'
+services:
+    device-sonar:
+        container_name: device-sonar
+        image: sonarqube:5.3
+        ports:
+            - 9000:9000
+            - 9092:9092
