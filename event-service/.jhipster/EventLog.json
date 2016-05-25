@@ -1,0 +1,42 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "eventId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "eventType",
+            "fieldType": "EventType",
+            "fieldValues": "ALERT,NOTIFICATION,LOCATION,CONNECT,DISCONNECT",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "deviceId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "eventData",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eventDateTime",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160524175321",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "event_log",
+    "pagination": "pagination",
+    "microserviceName": "event",
+    "searchEngine": "no"
+}
