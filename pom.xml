@@ -12,9 +12,5 @@
         <module>gateway</module>
         <module>device-service</module>
         <module>event-service</module>
-        <!--<module>app1</module>-->
-        <!--<module>app2</module>-->
-        <!--<module>app3</module>-->
-        <!--<module>docker</module>-->
     </modules>
 </project>
