@@ -1,9 +1,10 @@
-# microservices-demo
+microservices-demo
+==================
 
 This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).
 
-## Gateway
-
+Gateway
+-------
 This service is responsible for TODO
 
 ## UAA
@@ -26,7 +27,8 @@ This service is responsible for the DeviceGroup and Device Entities.
 This service is responsible for accepting events from devices.
 
 ### Event Service Entities
-* EventHistory - eventId, eventType, deviceId, eventData 
+* EventLog - eventId, eventType, deviceId, eventData 
+    * Note: EventLog gets renamed to event-log in api route :-(
 
 
 ## Getting Started
@@ -37,6 +39,8 @@ This service is responsible for accepting events from devices.
     [ ] Generate UI in gateway project
     [ ] Generate docker-compose
     [ ] Bring up Registry and ELK via docker
+        * `docker-compose -f jhipster-registry.yml up -d`
+        * `docker-compose -f elk.yml up -d`
     [ ] Update application.yml in config repo to turn on logging / update to docker.local ip
     [ ] Validate log forwarding is working as expected http://docker.local:5601
     [ ] Generate Entities in services

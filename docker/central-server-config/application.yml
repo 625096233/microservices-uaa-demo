@@ -8,10 +8,14 @@ jhipster:
         authentication:
             jwt:
                 secret: a17a6b6f9745d87d44d2975b83bc44752cdc78cd
+
     logging:
-        logstash: # forward logs to ELK
+        logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
             enabled: true
-            host: elk-logstash
+#           host: elk-logstash
+            host: docker.local
+            port: 5000
+            queueSize: 512
     metrics:
         logs: # report metrics in the logs
             enabled: true
