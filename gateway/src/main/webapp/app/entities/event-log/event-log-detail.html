@@ -1,0 +1,34 @@
+
+<div>
+    <h2><span>Event Log</span> {{vm.eventLog.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Event Id</span></dt>
+        <dd>
+            <span>{{vm.eventLog.eventId}}</span>
+        </dd>
+        <dt><span>Event Type</span></dt>
+        <dd>
+            <span translate="{{'gatewayApp.EventType.' + vm.eventLog.eventType}}">{{vm.eventLog.eventType}}</span>
+        </dd>
+        <dt><span>Device Id</span></dt>
+        <dd>
+            <span>{{vm.eventLog.deviceId}}</span>
+        </dd>
+        <dt><span>Event Data</span></dt>
+        <dd>
+            <span>{{vm.eventLog.eventData}}</span>
+        </dd>
+        <dt><span>Event Date Time</span></dt>
+        <dd>
+            <span>{{vm.eventLog.eventDateTime | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

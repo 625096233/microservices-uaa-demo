@@ -1,0 +1,68 @@
+<div>
+    <h2>Event Logs</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="event-log.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Event Log
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="eventId"><span>Event Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="eventType"><span>Event Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="deviceId"><span>Device Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="eventData"><span>Event Data</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="eventDateTime"><span>Event Date Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="eventLog in vm.eventLogs track by eventLog.id">
+                    <td><a ui-sref="event-log-detail({id:eventLog.id})">{{eventLog.id}}</a></td>
+                    <td>{{eventLog.eventId}}</td>
+                    <td translate="{{'gatewayApp.EventType.' + eventLog.eventType}}">{{eventLog.eventType}}</td>
+                    <td>{{eventLog.deviceId}}</td>
+                    <td>{{eventLog.eventData}}</td>
+                    <td>{{eventLog.eventDateTime | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="event-log-detail({id:eventLog.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="event-log.edit({id:eventLog.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="event-log.delete({id:eventLog.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>
