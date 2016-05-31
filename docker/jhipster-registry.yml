@@ -13,7 +13,8 @@ services:
             - SPRING_PROFILES_ACTIVE=dev,native
             - SECURITY_USER_PASSWORD=admin
             - JHIPSTER_LOGGING_LOGSTASH_ENABLED=true
-            - JHIPSTER_LOGGING_LOGSTASH_HOST=elk-logstash
+            #- JHIPSTER_LOGGING_LOGSTASH_HOST=elk-logstash
+            - JHIPSTER_LOGGING_LOGSTASH_HOST=docker.local
             - JHIPSTER_METRICS_LOGS_ENABLED=true
             - JHIPSTER_METRICS_LOGS_REPORTFREQUENCY=60
             # - GIT_URI=https://github.com/jhipster/jhipster-registry/
